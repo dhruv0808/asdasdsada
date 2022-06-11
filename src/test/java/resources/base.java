@@ -33,7 +33,7 @@ public static WebDriver driver;
 	
 	public static String readProperties(String propertename) throws Exception {
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Dhruv Rathod\\eclipse-workspace\\Shopinng_E2E_01\\src\\test\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\Dhruv Rathod\\git\\asdasdsada\\src\\test\\java\\resources\\data.properties");
 		prop.load(fis);
 		String properteName = prop.getProperty(propertename);
 		return properteName;
