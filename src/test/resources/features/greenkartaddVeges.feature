@@ -1,7 +1,7 @@
 @runloginFeature
 Feature: GreenKart adding vegtables
 
-  @tag1 @Test
+  @tag1
   Scenario: 
     Given Go to Greenkart page
     When I add Vegetables "1" Kg "Cucumber" and click on Add to cart button
