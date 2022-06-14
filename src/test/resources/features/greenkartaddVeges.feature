@@ -28,7 +28,7 @@ Feature: GreenKart adding vegtables
     And I enter the promo code "rahulshettyacademy"
     And I click on "Apply" button
     And I verified code apply successfully 
-    And I verified "No. of Items     : " is "3"
+    And I verified "No. of Items     : " is "1"
     And I verified "Total Amount     :" is "99"
     And I verified "Discount          : " is "10%"
     And I verified "Total After Discount : " is "89.1"   
