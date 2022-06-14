@@ -2,6 +2,7 @@ package resources;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -14,6 +15,7 @@ import resources.ExtentReportNG;
 import resources.base;
 
 public class Listeners extends base implements ITestListener {
+
 	ExtentTest test; 
 	ExtentReportNG extentreportng;
 	ExtentReports extent =  extentreportng.getReportObject();

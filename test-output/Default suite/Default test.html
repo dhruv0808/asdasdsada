@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 14 17:10:04 IST 2022</td>
+<td>Started on:</td><td>Tue Jun 14 18:46:21 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20561 ms)</td>
+<tr><td>Total time:</td><td>66 seconds (66871 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunner.testRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.testRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add cucumber", "Optional[GreenKart adding vegtables]"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[contains(text(),&apos;No. of Items     : &apos;)]//parent::div[contains(text(),&apos;3&apos;)] (tried for 30 second(s) with 3000 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-GJUQBFPT&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at resources.base.fluentWait(base.java:49)
+	at stepdef.GreenKartsteputils.i_verified(GreenKartsteputils.java:59)
+	at ?.I verified &quot;No. of Items     : &quot; is &quot;3&quot;(file:///C:/Users/Dhruv%20Rathod/git/asdasdsada/src/test/resources/features/greenkartaddVeges.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1957691975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1957691975'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[contains(text(),&apos;No. of Items     : &apos;)]//parent::div[contains(text(),&apos;3&apos;)] (tried for 30 second(s) with 3000 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-GJUQBFPT&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at resources.base.fluentWait(base.java:49)
+	at stepdef.GreenKartsteputils.i_verified(GreenKartsteputils.java:59)
+	at ?.I verified &quot;No. of Items     : &quot; is &quot;3&quot;(file:///C:/Users/Dhruv%20Rathod/git/asdasdsada/src/test/resources/features/greenkartaddVeges.feature:31)
+</pre></div></td>
+<td>45</td>
+<td>testrunner.testRunner@2d710f1a</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +107,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunner.testRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.testRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[GreenKart adding vegtables]"</td>
+<td title='testrunner.testRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.testRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add cucumber , Tomato and Brinjal", "Optional[GreenKart adding vegtables]"</td>
 <td></td>
-<td>18</td>
-<td>testrunner.testRunner@428640fa</td></tr>
+<td>17</td>
+<td>testrunner.testRunner@2d710f1a</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package resources;
 
+import org.slf4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
@@ -18,6 +19,7 @@ public class ExtentReportNG {
 		 reporter.config().setDocumentTitle("Test results");
 		 extentReports = new ExtentReports();
 		 extentReports.attachReporter(reporter);
+		 
 		 extentReports.setSystemInfo("Tester", "Dhruv");
 		 return extentReports;
 	}

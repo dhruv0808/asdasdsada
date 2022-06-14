@@ -15,10 +15,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class base {
 public static WebDriver driver;
-	
+private static final Logger log = LoggerFactory.getLogger(base.class);
+
 	public static WebDriver driverinitialze() throws Exception {
 		System.setProperty(readProperties("browserdata"),readProperties("driverLocation"));
 		driver = new FirefoxDriver();
@@ -27,6 +31,7 @@ public static WebDriver driver;
 	public static WebDriver getdriver() throws Exception {
 		if(driver == null) {
 			driverinitialze();
+			log.info("Driver is initialized");
 		}
 		return driver;
 	}
@@ -46,17 +51,20 @@ public static WebDriver driver;
 		return element ;
 	}
 	
-    public void getScreenShotPath(String filename) throws Exception {
+    public String getScreenShotPath(String filename) throws Exception {
 		
 		TakesScreenshot tss = (TakesScreenshot) driver;
 		File screenshotfile =tss.getScreenshotAs(OutputType.FILE);
 		String destinationfile = System.getProperty("user.dir")+"\\reports\\"+filename+".png";
 		FileUtils.copyFile(screenshotfile,new File(destinationfile));
+		
+		return destinationfile;
 	}
     
 	public static void closeBrowserAndDriver() {
 		
 		if(driver!=null) {
+			log.info("Driver is closed");
 			driver.quit();
 		}
 		}

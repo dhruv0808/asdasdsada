@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dhruv Rathod\AppData\Local\Temp\testng-eclipse--827183829\testng-customsuite.xml</span>
+                    <span>C:\Users\Dhruv Rathod\AppData\Local\Temp\testng-eclipse-2005008067\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testrunner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add cucumber&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">runScenario("Add cucumber", "Optional[GreenKart adding vegtables]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +118,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testrunner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">runScenario("", "Optional[GreenKart adding vegtables]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testrunner.testRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add cucumber , Tomato and Brinjal&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">runScenario("Add cucumber , Tomato and Brinjal", "Optional[GreenKart adding vegtables]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,6 +133,35 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testrunner.testRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add cucumber&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">
+                  </a> <!-- runScenario("Add cucumber", "Optional[GreenKart adding vegtables]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add cucumber", "Optional[GreenKart adding vegtables]")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //b[contains(text(),&apos;No. of Items     : &apos;)]//parent::div[contains(text(),&apos;3&apos;)] (tried for 30 second(s) with 3000 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;LAPTOP-GJUQBFPT&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at resources.base.fluentWait(base.java:49)
+	at stepdef.GreenKartsteputils.i_verified(GreenKartsteputils.java:59)
+	at ✽.I verified &quot;No. of Items     : &quot; is &quot;3&quot;(file:///C:/Users/Dhruv%20Rathod/git/asdasdsada/src/test/resources/features/greenkartaddVeges.feature:31)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -127,10 +170,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">
-                  </a> <!-- runScenario("", "Optional[GreenKart adding vegtables]") -->
+                  <a name="runScenario(&quot;Add cucumber , Tomato and Brinjal&quot;, &quot;Optional[GreenKart adding vegtables]&quot;)">
+                  </a> <!-- runScenario("Add cucumber , Tomato and Brinjal", "Optional[GreenKart adding vegtables]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("", "Optional[GreenKart adding vegtables]")</span>
+                  <span class="parameters">("Add cucumber , Tomato and Brinjal", "Optional[GreenKart adding vegtables]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -140,7 +183,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dhruv Rathod\AppData\Local\Temp\testng-eclipse--827183829\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dhruv Rathod\AppData\Local\Temp\testng-eclipse-2005008067\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,16 +240,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testrunner.testRunner')
-data.setCell(0, 3, 18771);
+data.setCell(0, 3, 45917);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'testrunner.testRunner')
+data.setCell(1, 3, 17973);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -238,12 +285,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("", "Optional[GreenKart adding vegtables]")</span>
-                <span class="method-start">367 ms</span>
+                <span class="method-name">runScenario("Add cucumber , Tomato and Brinjal", "Optional[GreenKart adding vegtables]")</span>
+                <span class="method-start">349 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add cucumber", "Optional[GreenKart adding vegtables]")</span>
+                <span class="method-start">19699 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">20512 ms</span>
+                <span class="method-start">66823 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
